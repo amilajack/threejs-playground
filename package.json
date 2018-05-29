@@ -4,9 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "three": "^0.92.0"
+    "three": "^0.92.0",
+    "threejs-window-resize": "^1.0.1"
   },
   "devDependencies": {
     "parcel": "^1.8.1"
+  },
+  "scripts": {
+    "start": "parcel index.html"
   }
 }
