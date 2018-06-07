@@ -22,11 +22,20 @@ const material = new THREE.MeshBasicMaterial({
 	color: 0x00ff00,
 	wireframe: true
 });
-const boxMaterial = new THREE.MeshBasicMaterial({
+const boxMaterial = new THREE.MeshLambertMaterial({
 	color: 0xAAAAAA
 })
+
+// Add lights
+const light = new THREE.AmbientLight(0xFFFFFF, 0.5)
+scene.add(light)
+
+const light2 = new THREE.PointLight(0xAFAFAF, 0.9)
+light2.position.set(0, 0, 10)
+scene.add(light2)
+
 const cube = new THREE.Mesh( geometry,  boxMaterial);
-cube.position.set(0, 0, -10)
+cube.position.set(0, 0, 0)
 scene.add(cube);
 scene.add( new THREE.AxesHelper( 20 ) );
 
